@@ -72,9 +72,9 @@ public class MetricsWebSocketHandler extends TextWebSocketHandler {
 
     private Map<String, Object> generateMetrics() {
         Map<String, Object> metrics = new HashMap<>();
-        metrics.put("cpu", 30 + random.nextInt(40));
-        metrics.put("memory", 50 + random.nextInt(30));
-        metrics.put("disk", 70 + random.nextInt(15));
+        metrics.put("cpu", 60 + random.nextInt(30));      // 60-89 (알림 나옴!)
+        metrics.put("memory", 70 + random.nextInt(25));   // 70-94 (알림 나옴!)
+        metrics.put("disk", 80 + random.nextInt(20));     // 80-99 (알림 나옴!)
         metrics.put("network", 100 + random.nextInt(50));
         metrics.put("timestamp", System.currentTimeMillis());
         return metrics;
